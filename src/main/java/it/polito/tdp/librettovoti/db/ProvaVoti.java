@@ -10,7 +10,7 @@ import java.sql.Statement;
 public class ProvaVoti {
 
 	public void aggiungiVoto(String nome, int punti) {
-		String url = "jdbc:mysql://localhost:3306/libretto?user=root&password=root";
+		String url = "jdbc:mysql://localhost:3306/libretto?user=root&password=casavalente00";
 		try {
 			Connection conn = DriverManager.getConnection(url);
 			String sql = "INSERT INTO voti (nome, punti) VALUES (?, ?)";
@@ -37,7 +37,7 @@ public class ProvaVoti {
 		provaVoti.aggiungiVoto("Econonomia Aziendale", 25);
 		
 
-		String url = "jdbc:mysql://localhost:3306/libretto?user=root&password=root";
+		String url = "jdbc:mysql://localhost:3306/libretto?user=root&password=casavalente00";
 
 		try {
 			Connection conn = DriverManager.getConnection(url);
