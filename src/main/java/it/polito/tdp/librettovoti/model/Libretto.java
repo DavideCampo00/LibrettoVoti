@@ -1,6 +1,7 @@
 package it.polito.tdp.librettovoti.model;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class Libretto {
@@ -88,6 +89,21 @@ public class Libretto {
 			nuovo.add(new Voto(v.getNome(), punti)) ;
 		}
 		return nuovo ;
+	}
+	
+	public Libretto ordineAlfabetico() {
+		Libretto result=new Libretto();
+		result.voti=new ArrayList<Voto>(this.voti);
+		Collections.sort(result.voti,new ComparatoreOrdineAlfabetico());
+		return result;
+		
+	}
+	public Libretto ordineVotoDecrescente() {
+		Libretto result=new Libretto();
+		result.voti=new ArrayList<Voto>(this.voti);
+		Collections.sort(result.voti,new ComparatoreVotoDecrescente());
+		return result;
+		
 	}
 	
 	
